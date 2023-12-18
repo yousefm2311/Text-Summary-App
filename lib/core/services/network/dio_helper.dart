@@ -19,7 +19,7 @@ class Dio_Helper {
     required String url,
     Map<String, dynamic>? query,
     required Map<String, dynamic> data,
-    var api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNDg5OTc2N2UtYzRiMC00YzlkLTkwZTYtYWY2ZmUwNzE0NjBjIiwidHlwZSI6ImFwaV90b2tlbiJ9.I_Qs4NNA7MDzPN_KmcJHLW28OHifiUxGy5nWOHCKo38",
+    var api_key = "",
   }) async {
     dio!.options.headers = {
       'Authorization': "Bearer $api_key",
