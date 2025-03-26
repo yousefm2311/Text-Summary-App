@@ -5,7 +5,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:text_summary_edit/core/services/const.dart';
 import 'package:text_summary_edit/core/services/firebase_options.dart';
 import 'package:text_summary_edit/core/services/network/dio_helper.dart';
 
@@ -24,10 +23,10 @@ class SettingsServices extends GetxService {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     ).then((value) async {
-      token = await FirebaseMessaging.instance.getToken();
-      if (kDebugMode) {
-        print("token $token");
-      }
+      // token = await FirebaseMessaging.instance.getToken();
+      // if (kDebugMode) {
+      //   print("token $token");
+      // }
     });
     return this;
   }

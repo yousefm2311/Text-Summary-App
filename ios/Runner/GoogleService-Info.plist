@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-	<dict>
-
-		<key>CLIENT_ID</key>
-		<string>1021245758019-3apmanj8k5ei9heu91rlg6thfemevb4m.apps.googleusercontent.com</string>
-		<key>REVERSED_CLIENT_ID</key>
-		<string>com.googleusercontent.apps.1021245758019-3apmanj8k5ei9heu91rlg6thfemevb4m</string>
-		<key>ANDROID_CLIENT_ID</key>
-		<string>1021245758019-t9vpiteqfts3gn8309d6b5n12t1mkvmg.apps.googleusercontent.com</string>
-		<key>API_KEY</key>
-		<string>AIzaSyByDaUKYfJ5bcUTJNSxUmZ-Cw4PxLVf9oE</string>
-		<key>GCM_SENDER_ID</key>
-		<string>1021245758019</string>
-		<key>PLIST_VERSION</key>
-		<string>1</string>
-		<key>BUNDLE_ID</key>
-		<string>com.example.textSummaryEdit</string>
-		<key>PROJECT_ID</key>
-		<string>summary-text-2c844</string>
-		<key>STORAGE_BUCKET</key>
-		<string>summary-text-2c844.appspot.com</string>
-		<key>IS_ADS_ENABLED</key>
-		<false></false>
-		<key>IS_ANALYTICS_ENABLED</key>
-		<false></false>
-		<key>IS_APPINVITE_ENABLED</key>
-		<true></true>
-		<key>IS_GCM_ENABLED</key>
-		<true></true>
-		<key>IS_SIGNIN_ENABLED</key>
-		<true></true>
-		<key>GOOGLE_APP_ID</key>
-		<string>1:1021245758019:ios:10c604f180d42a0b9852f6</string>
-	</dict>
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1021245758019-3apmanj8k5ei9heu91rlg6thfemevb4m.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1021245758019-3apmanj8k5ei9heu91rlg6thfemevb4m</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1021245758019-28i089curb5vdvi038sk5c476osagedo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyByDaUKYfJ5bcUTJNSxUmZ-Cw4PxLVf9oE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1021245758019</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.textSummaryEdit</string>
+	<key>PROJECT_ID</key>
+	<string>summary-text-2c844</string>
+	<key>STORAGE_BUCKET</key>
+	<string>summary-text-2c844.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1021245758019:ios:5079f40262b9108c9852f6</string>
+</dict>
 </plist>

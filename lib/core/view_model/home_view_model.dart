@@ -201,7 +201,7 @@ class HomeViewModel extends GetxController {
   var picker = ImagePicker();
   Future<void> getImageProfile() async {
     try {
-      final pickerFile = await picker.getImage(source: ImageSource.gallery);
+      final pickerFile = await picker.pickImage(source: ImageSource.gallery);
       if (pickerFile != null) {
         image = File(pickerFile.path);
       } else {

@@ -51,6 +51,11 @@
 
 		<!-- Put me in the [my_project]/ios/Runner/Info.plist file -->
 		<!-- Google Sign-in Section -->
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>googlechromes</string>
+			<string>googlechrome</string>
+		</array>
 		<key>CFBundleURLTypes</key>
 		<array>
 			<dict>

@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -44,18 +41,18 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC8CZJSNwuNaxLuFNiiv6ARpSmdOeClVLM',
-    appId: '1:1021245758019:web:9f017d6a2f9196969852f6',
+    apiKey: 'AIzaSyD8FDOoEdw7kcZlWF1Ea_PyF6snaLHeVbM',
+    appId: '1:1021245758019:web:0b5d80d2cecf286e9852f6',
     messagingSenderId: '1021245758019',
     projectId: 'summary-text-2c844',
     authDomain: 'summary-text-2c844.firebaseapp.com',
     storageBucket: 'summary-text-2c844.appspot.com',
-    measurementId: 'G-KKDNQ7BTWK',
+    measurementId: 'G-YSX8Q1KXG2',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCqUGYejb7XqIs9TNO7SxX42Aev3zO_v20',
-    appId: '1:1021245758019:android:4079b93e4f727b5d9852f6',
+    appId: '1:1021245758019:android:bdc6a594080135a59852f6',
     messagingSenderId: '1021245758019',
     projectId: 'summary-text-2c844',
     storageBucket: 'summary-text-2c844.appspot.com',
@@ -63,23 +60,34 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyByDaUKYfJ5bcUTJNSxUmZ-Cw4PxLVf9oE',
-    appId: '1:1021245758019:ios:10c604f180d42a0b9852f6',
+    appId: '1:1021245758019:ios:5079f40262b9108c9852f6',
     messagingSenderId: '1021245758019',
     projectId: 'summary-text-2c844',
     storageBucket: 'summary-text-2c844.appspot.com',
-    androidClientId: '1021245758019-t9vpiteqfts3gn8309d6b5n12t1mkvmg.apps.googleusercontent.com',
+    androidClientId: '1021245758019-28i089curb5vdvi038sk5c476osagedo.apps.googleusercontent.com',
     iosClientId: '1021245758019-3apmanj8k5ei9heu91rlg6thfemevb4m.apps.googleusercontent.com',
     iosBundleId: 'com.example.textSummaryEdit',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyByDaUKYfJ5bcUTJNSxUmZ-Cw4PxLVf9oE',
-    appId: '1:1021245758019:ios:10c604f180d42a0b9852f6',
+    appId: '1:1021245758019:ios:5079f40262b9108c9852f6',
     messagingSenderId: '1021245758019',
     projectId: 'summary-text-2c844',
     storageBucket: 'summary-text-2c844.appspot.com',
-    androidClientId: '1021245758019-t9vpiteqfts3gn8309d6b5n12t1mkvmg.apps.googleusercontent.com',
+    androidClientId: '1021245758019-28i089curb5vdvi038sk5c476osagedo.apps.googleusercontent.com',
     iosClientId: '1021245758019-3apmanj8k5ei9heu91rlg6thfemevb4m.apps.googleusercontent.com',
     iosBundleId: 'com.example.textSummaryEdit',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyB2Pgcpa608ynHdx6hvSQgP5qOP_ksKvQw',
+    appId: '1:1021245758019:web:4a274f7619cb62939852f6',
+    messagingSenderId: '1021245758019',
+    projectId: 'summary-text-2c844',
+    authDomain: 'summary-text-2c844.firebaseapp.com',
+    storageBucket: 'summary-text-2c844.appspot.com',
+    measurementId: 'G-F6YYQ1MYHS',
+  );
+
 }

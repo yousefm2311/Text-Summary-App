@@ -126,7 +126,7 @@ class SettingsViewModel extends GetxController {
   File? image;
   var picker = ImagePicker();
   Future<void> getImageProfile() async {
-    final pickerFile = await picker.getImage(source: ImageSource.gallery);
+    final pickerFile = await picker.pickImage(source: ImageSource.gallery);
     if (pickerFile != null) {
       image = File(pickerFile.path);
       update();

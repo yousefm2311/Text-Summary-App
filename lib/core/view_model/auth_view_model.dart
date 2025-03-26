@@ -40,30 +40,53 @@ class AuthViewModel extends GetxController {
   void googleSignIn() async {
     try {
       isLoadingGoogle.value = true;
+
+      // Trigger Google Sign-In
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      GoogleSignInAuthentication googleSignInAuthentication =
-          await googleUser!.authentication;
-      AuthCredential credential = GoogleAuthProvider.credential(
-        accessToken: googleSignInAuthentication.accessToken,
-        idToken: googleSignInAuthentication.idToken,
-      );
-      await _auth.signInWithCredential(credential).then((value) async {
-        shared.sharedPref!.setBool('uId', true);
-        shared.sharedPref!.setString('Id', value.user!.uid);
-        Get.snackbar('Success', value.user!.email!);
-        uId = value.user!.uid;
-        addToFireStore(value);
+      if (googleUser == null) {
         isLoadingGoogle.value = false;
-        Get.offAllNamed(AppRoutes.initState);
-      });
+        return; // User canceled the sign-in
+      }
+
+      // Obtain authentication details
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+
+      // Create a credential
+      final AuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      // Sign in to Firebase with the credential
+      final UserCredential userCredential =
+          await _auth.signInWithCredential(credential);
+
+      // Save user data to shared preferences
+      shared.sharedPref!.setBool('uId', true);
+      shared.sharedPref!.setString('Id', userCredential.user!.uid);
+      uId = userCredential.user!.uid;
+
+      // Add user data to Firestore
+      addToFireStore(userCredential);
+
+      // Show success message
+      Get.snackbar('Success', 'Signed in as ${userCredential.user!.email}');
+      isLoadingGoogle.value = false;
+
+      // Navigate to the home screen
+      Get.offAllNamed(AppRoutes.initState);
     } on PlatformException catch (error) {
+      isLoadingGoogle.value = false;
       if (error.code == 'sign_in_canceled') {
         Get.snackbar('Cancel', 'Cancelled the sign-in');
-        isLoadingGoogle.value = false;
       } else {
-        isLoadingGoogle.value = false;
-        rethrow;
+        Get.snackbar(
+            'Error', 'Failed to sign in with Google: ${error.message}');
       }
+    } catch (e) {
+      isLoadingGoogle.value = false;
+      Get.snackbar('Error', 'Failed to sign in with Google: $e');
     }
   }
 
